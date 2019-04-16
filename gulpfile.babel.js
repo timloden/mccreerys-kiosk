@@ -192,6 +192,45 @@ gulp.task( 'stylesRTL', () => {
 });
 
 /**
+ * Task: `foundationJS`.
+ *
+ * Concatenate and uglify Foundation JS scripts.
+ */
+
+gulp.task( 'foundationJS', () => {
+	return gulp
+		.src( './node_modules/foundation-sites/dist/js/foundation.min.js', { since: gulp.lastRun( 'vendorsJS' ) }) // Only run on changed files.
+		.pipe( plumber( errorHandler ) )
+		.pipe(
+			babel({
+				presets: [
+					[
+						'@babel/preset-env', // Preset to compile your modern JS to ES5.
+						{
+							targets: { browsers: config.BROWSERS_LIST } // Target browser list to support.
+						}
+					]
+				]
+			})
+		)
+		//.pipe( remember( config.jsVendorSRC ) ) // Bring all files back to stream.
+		//.pipe( concat( config.jsVendorFile + '.js' ) )
+		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+		.pipe( gulp.dest( config.jsVendorDestination ) )
+		.pipe(
+			rename({
+				basename: 'foundation',
+				suffix: '.min'
+			})
+		)
+		.pipe( uglify() )
+		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+		.pipe( gulp.dest( config.jsVendorDestination ) )
+		.pipe( notify({ message: '\n\n✅  ===> Foundation JS — completed!\n', onLast: true }) );
+});
+
+
+/**
  * Task: `vendorsJS`.
  *
  * Concatenate and uglify vendor JS scripts.
@@ -233,6 +272,8 @@ gulp.task( 'vendorsJS', () => {
 		.pipe( gulp.dest( config.jsVendorDestination ) )
 		.pipe( notify({ message: '\n\n✅  ===> VENDOR JS — completed!\n', onLast: true }) );
 });
+
+
 
 /**
  * Task: `customJS`.
@@ -355,7 +396,7 @@ gulp.task( 'translate', () => {
  */
 gulp.task(
 	'default',
-	gulp.parallel( 'styles', 'vendorsJS', 'customJS', 'images', browsersync, () => {
+	gulp.parallel( 'styles', 'foundationJS', 'vendorsJS', 'customJS', 'images', browsersync, () => {
 		gulp.watch( config.watchPhp, reload ); // Reload on PHP file changes.
 		gulp.watch( config.watchStyles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
 		gulp.watch( config.watchJsVendor, gulp.series( 'vendorsJS', reload ) ); // Reload on vendorsJS file changes.
