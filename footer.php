@@ -10,27 +10,20 @@
  */
 
 ?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mccreerys-kiosk' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'mccreerys-kiosk' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'mccreerys-kiosk' ), 'mccreerys-kiosk', '<a href="http://underscores.me/">Tim Loden</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+</div>
+ <footer>
+ 	<?php wp_nav_menu( array(
+ 		'menu' => 'menu-1',
+ 		'menu_class' => 'footer-menu',
+ 		));
+ 	?>
+ </footer>
 
 <?php wp_footer(); ?>
-
+<script>
+	FlexMasonry.init('.grid', {
+    	numCols: 3
+	});
+</script>
 </body>
 </html>

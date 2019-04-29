@@ -119,6 +119,7 @@ gulp.task( 'styles', () => {
 		.pipe( sourcemaps.init() )
 		.pipe(
 			sass({
+				includePaths: ['node_modules/motion-ui/src'],
 				errLogToConsole: config.errLogToConsole,
 				outputStyle: config.outputStyle,
 				precision: config.precision
@@ -199,7 +200,9 @@ gulp.task( 'stylesRTL', () => {
 
 gulp.task( 'foundationJS', () => {
 	return gulp
-		.src( './node_modules/foundation-sites/dist/js/foundation.min.js', { since: gulp.lastRun( 'vendorsJS' ) }) // Only run on changed files.
+		.src([
+			'./node_modules/foundation-sites/dist/js/foundation.min.js'
+		])
 		.pipe( plumber( errorHandler ) )
 		.pipe(
 			babel({
@@ -243,7 +246,11 @@ gulp.task( 'foundationJS', () => {
  */
 gulp.task( 'vendorsJS', () => {
 	return gulp
-		.src( config.jsVendorSRC, { since: gulp.lastRun( 'vendorsJS' ) }) // Only run on changed files.
+		.src([
+			config.jsVendorSRC,
+			'./node_modules/owl.carousel/dist/owl.carousel.min.js',
+			'./node_modules/flexmasonry/dist/flexmasonry.js'
+			])
 		.pipe( plumber( errorHandler ) )
 		.pipe(
 			babel({
@@ -288,7 +295,7 @@ gulp.task( 'vendorsJS', () => {
  */
 gulp.task( 'customJS', () => {
 	return gulp
-		.src( config.jsCustomSRC, { since: gulp.lastRun( 'customJS' ) }) // Only run on changed files.
+		.src( config.jsCustomSRC ) // Only run on changed files.
 		.pipe( plumber( errorHandler ) )
 		.pipe(
 			babel({

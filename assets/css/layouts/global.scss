@@ -1,0 +1,63 @@
+// sticky footer
+body {
+	height: auto !important;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+
+	.content {
+		flex: 1 0
+	}
+}
+
+header {
+	background-color: $primary-color;
+	padding: 20px;
+	text-align: center;
+	color: $white;
+}
+
+footer {
+	background-color: $primary-color;
+	color: $white;
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+
+	a {
+		color: $white;
+	}
+
+	ul.footer-menu {
+
+		display: flex;
+		margin-left: 0;
+		list-style: none;
+		margin-bottom: 0;
+
+		li {
+			flex-grow: 1;
+			border-right: 1px solid #fff;
+			text-align: center;
+
+			&:last-child {
+				border-right: none;
+			}
+
+			a {
+				padding: 20px;
+				display: block;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.main-content {
+	padding-bottom: 80px;
+}
+
+ul.gform_fields {
+	list-style: none;
+	margin-left: 0;
+}

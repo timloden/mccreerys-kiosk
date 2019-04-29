@@ -7,3 +7,17 @@
 
 @import './foundation/settings';
 @import 'node_modules/foundation-sites/assets/foundation.scss';
+@include foundation-everything;
+
+// @include foundation-grid;
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+
+@import 'motion-ui';
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+@import 'node_modules/flexmasonry/dist/flexmasonry';
+
+@import 'https://fonts.googleapis.com/css?family=Playfair+Display|Poppins';
+@import './layouts/global';

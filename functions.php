@@ -126,7 +126,7 @@ function mccreerys_kiosk_scripts() {
 	wp_enqueue_script( 'mccreerys-kiosk-foundation-scripts', get_template_directory_uri() . '/assets/js/foundation.min.js', array(), '20151215', true );
 
 	// vendor scripts. only uncomment if you have files in assets/js/vendor
-	//wp_enqueue_script( 'mccreerys-kiosk-vendor-scripts', get_template_directory_uri() . '/assets/js/vendor.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'mccreerys-kiosk-vendor-scripts', get_template_directory_uri() . '/assets/js/vendor.min.js', array(), '20151215', true );
 
 	// custom demo_theme_scripts
 	// note that we pass 'customize-preview' into the array();
@@ -165,4 +165,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
