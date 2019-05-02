@@ -22,6 +22,6 @@
 
 <body <?php body_class(); ?>>
 <header>
-	# header
+	<a href="/"><img class="header-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mccreerys-white-logo.png"></a>
 </header>
 <div class="content">

@@ -20,10 +20,5 @@
  </footer>
 
 <?php wp_footer(); ?>
-<script>
-	FlexMasonry.init('.grid', {
-    	numCols: 3
-	});
-</script>
 </body>
 </html>

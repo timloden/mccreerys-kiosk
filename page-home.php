@@ -22,8 +22,11 @@ get_header();
 	<div class="columns small-12">
 		<h1 class="text-center"><?php echo $hero_title; ?></h1>
 		<p class="text-center"><?php echo $hero_text; ?></p>
+		<img class="home-hero" src="<?php echo $hero_background_image; ?>">
 
-		<?php if( have_rows('home_brands') ): ?>
+		<?php if( have_rows('home_brands') ): $brand_count = 0; ?>
+
+			<h2 class="text-center brands-title">Browse Brands</h2>
 
 			<div class="row align-middle small-up-1 medium-up-2 large-up-3">
 
@@ -31,10 +34,12 @@ get_header();
 
 				$brand_logo = get_sub_field('brand_logo');
 				$brand_page = get_sub_field('brand_page');
+				$brand_count++;
+
 			?>
 
 				<div class="column align-self-middle text-center home-brand-link">
-					<a href="<?php echo $brand_page; ?>">
+					<a class="home-brand-button" href="<?php echo $brand_page; ?>">
 						<img src="<?php echo $brand_logo; ?>">
 					</a>
 				</div>

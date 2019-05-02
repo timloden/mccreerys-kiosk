@@ -22,15 +22,18 @@ $size = 'full'; // (thumbnail, medium, large, full or custom size)
 get_header();
 ?>
 
-<div class="row main-content">
+<div class="row main-content brand-page">
 	<div class="columns small-12">
 		<h1 class="text-center brand-logo"><img src="<?php echo $brand_logo; ?>"></h1>
 		<hr>
 		<p class="text-center"><?php echo $brand_description; ?></p>
 		<p class="text-center"><a class="button" href="#" data-open="myModal"><strong>Get more information</strong></a></p>
 
+	</div>
+</div>
+
 		<?php if( $images ): ?>
-		    <div class="row align-middle small-up-1 medium-up-2 large-up-3">
+		    <div class="row collapse align-middle small-up-1 medium-up-2 large-up-3">
 		        <?php foreach( $images as $image ): ?>
 		            <div class="column align-self-middle text-center">
 		            	<a class="brand-thumb" data-image="<?php echo $image['url']; ?>"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"></a>
@@ -39,8 +42,7 @@ get_header();
 		    </div>
 		<?php endif; ?>
 
-	</div>
-</div>
+
 
 <div id="myModal" class="reveal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
 	<p>Please fill out the form below and we will contact you with updates on <?php echo $brand_name; ?> products!</p>

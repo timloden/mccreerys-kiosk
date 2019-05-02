@@ -4,7 +4,7 @@ Theme URI: https://underscores.me/
 Author: Tim Loden
 Author URI: https://automattic.com/
 Description: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: _s
@@ -1893,9 +1893,16 @@ html.is-reveal-open body{overflow-y:hidden}
 .flexmasonry-break-5{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5}
 .flexmasonry-break-6{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6}
 .flexmasonry-break-7{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7}
+.home-hero{margin-bottom:50px}
+.brands-title{margin-bottom:20px}
+.home-brand-link{margin-bottom:20px}
+.home-brand-button{border-radius:4px;display:block;padding:20px;-webkit-box-shadow:0 2px 10px 1px rgba(0,0,0,0.15);box-shadow:0 2px 10px 1px rgba(0,0,0,0.15)}
+.brand-logo{margin:20px 0}
+.brand-logo img{max-width:500px}
 body{height:auto !important;display:-webkit-box;display:-ms-flexbox;display:flex;min-height:100vh;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 body .content{-webkit-box-flex:1;-ms-flex:1 0;flex:1 0}
 header{background-color:#e53a3a;padding:20px;text-align:center;color:#fff}
+header .header-logo{max-width:180px}
 footer{background-color:#e53a3a;color:#fff;position:fixed;bottom:0;width:100%}
 footer a{color:#fff}
 footer ul.footer-menu{display:-webkit-box;display:-ms-flexbox;display:flex;margin-left:0;list-style:none;margin-bottom:0}
