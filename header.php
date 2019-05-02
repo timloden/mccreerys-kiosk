@@ -22,6 +22,18 @@
 
 <body <?php body_class(); ?>>
 <header>
-	<a href="/"><img class="header-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mccreerys-white-logo.png"></a>
+	<div class="row">
+		<div class="columns medium-1">
+			<?php if ( !is_front_page() ) : ?>
+				<a class="back-button" onclick="window.history.back()"><i class="fas fa-chevron-left"></i></a>
+			<?php endif; ?>
+		</div>
+		<div class="columns medium-10">
+			<a href="/"><img class="header-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mccreerys-white-logo.png"></a>
+		</div>
+		<div class="columns medium-1">
+
+		</div>
+	</div>
 </header>
 <div class="content">

@@ -52,7 +52,7 @@ get_header();
 	</button>
 </div>
 
-<div id="image-zoom" class="full reveal" data-reveal aria-hidden="true" role="dialog">
+<div id="image-zoom" class="reveal" data-reveal aria-hidden="true" role="dialog">
 	<img id="main-modal-image" class="brand-main-image" src="<?php echo $brand_main_image; ?>">
 	<button class="close-button" data-close aria-label="Close modal" type="button">
     	<span aria-hidden="true">&times;</span>
