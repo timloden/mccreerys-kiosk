@@ -22,6 +22,10 @@ header {
 
 	a {
 		color: #fff;
+
+		&:visited {
+			color: #fff;
+		}
 	}
 
 	.back-button {
@@ -65,11 +69,24 @@ footer {
 	}
 }
 
-.main-content {
-	padding-bottom: 80px;
+.content {
+	padding: 0 0 80px;
 }
 
 ul.gform_fields {
 	list-style: none;
 	margin-left: 0;
 }
+
+.brand-grid {
+	margin-bottom: 70px;
+}
+
+.brand-cta {
+	padding: 20px 0;
+	.button {
+		border-radius: 5px;
+		font-size: 20px;
+	}
+}
+

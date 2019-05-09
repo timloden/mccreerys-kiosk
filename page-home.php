@@ -15,14 +15,27 @@
 $hero_title = get_field( "hero_title" );
 $hero_text = get_field( "hero_text" );
 $hero_background_image = get_field( "hero_background_image" );
-
+$hero_video = get_field( "hero_video" );
 get_header();
 ?>
 <div class="row main-content">
 	<div class="columns small-12">
-		<h1 class="text-center"><?php echo $hero_title; ?></h1>
-		<p class="text-center"><?php echo $hero_text; ?></p>
-		<img class="home-hero" src="<?php echo $hero_background_image; ?>">
+		<?php if ($hero_title) : ?>
+			<h1 class="text-center"><?php echo $hero_title; ?></h1>
+		<?php endif; ?>
+
+		<?php if ($hero_text) : ?>
+			<p class="text-center"><?php echo $hero_text; ?></p>
+		<?php endif; ?>
+
+		<?php if ($hero_video) : ?>
+			<div class="responsive-embed widescreen home-video">
+				<iframe width="560" height="315" src="<?php echo $hero_video; ?>" frameborder="0" allowfullscreen></iframe>
+			</div>
+
+		<?php elseif ($hero_background_image) : ?>
+			<img class="home-hero" src="<?php echo $hero_background_image; ?>">
+		<?php endif; ?>
 
 		<?php if( have_rows('home_brands') ): $brand_count = 0; ?>
 

@@ -4,7 +4,7 @@ Theme URI: https://underscores.me/
 Author: Tim Loden
 Author URI: https://automattic.com/
 Description: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: _s
@@ -3304,6 +3304,7 @@ html.is-reveal-open body{overflow-y:hidden}
  */@font-face{font-family:'Font Awesome 5 Free';font-style:normal;font-weight:900;font-display:auto;src:url("assets/webfonts/fa-solid-900.eot");src:url("assets/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"),url("assets/webfonts/fa-solid-900.woff2") format("woff2"),url("assets/webfonts/fa-solid-900.woff") format("woff"),url("assets/webfonts/fa-solid-900.ttf") format("truetype"),url("assets/webfonts/fa-solid-900.svg#fontawesome") format("svg")}
 .fa,.fas{font-family:'Font Awesome 5 Free';font-weight:900}
 .home-hero{margin-bottom:50px}
+.home-video{margin-top:15px}
 .brands-title{margin-bottom:20px}
 .home-brand-link{margin-bottom:20px}
 .home-brand-button{border-radius:4px;display:block;padding:20px;-webkit-box-shadow:0 2px 10px 1px rgba(0,0,0,0.15);box-shadow:0 2px 10px 1px rgba(0,0,0,0.15)}
@@ -3314,6 +3315,7 @@ body .content{-webkit-box-flex:1;-ms-flex:1 0;flex:1 0}
 header{background-color:#e53a3a;padding:20px;text-align:center;color:#fff}
 header .header-logo{max-width:180px}
 header a{color:#fff}
+header a:visited{color:#fff}
 header .back-button{font-size:25px}
 footer{background-color:#e53a3a;color:#fff;position:fixed;bottom:0;width:100%}
 footer a{color:#fff}
@@ -3321,8 +3323,11 @@ footer ul.footer-menu{display:-webkit-box;display:-ms-flexbox;display:flex;margi
 footer ul.footer-menu li{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;border-right:1px solid #fff;text-align:center}
 footer ul.footer-menu li:last-child{border-right:0}
 footer ul.footer-menu li a{padding:20px;display:block;font-weight:bold}
-.main-content{padding-bottom:80px}
+.content{padding:0 0 80px}
 ul.gform_fields{list-style:none;margin-left:0}
+.brand-grid{margin-bottom:70px}
+.brand-cta{padding:20px 0}
+.brand-cta .button{border-radius:5px;font-size:20px}
 @media screen and (orientation:landscape){.show-for-landscape,.hide-for-portrait{display:block !important}
 .hide-for-landscape,.show-for-portrait{display:none !important}
 .show-for-landscape,.hide-for-portrait{display:block !important}

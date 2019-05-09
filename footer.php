@@ -20,5 +20,10 @@
  </footer>
 
 <?php wp_footer(); ?>
+
+<script>
+	FlexMasonry.init('.brand-grid');
+</script>
+
 </body>
 </html>
