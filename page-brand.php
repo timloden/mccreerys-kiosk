@@ -75,7 +75,9 @@ get_header();
 </div>
 
 <div id="image-zoom" class="large reveal" data-reveal aria-hidden="true" role="dialog" data-animation-in="fade-in" data-animation-out="fade-out">
-	<img id="main-modal-image" class="brand-main-image" src="<?php echo $brand_main_image; ?>">
+	<a data-close aria-label="Close modal">
+		<img id="main-modal-image" class="brand-main-image" src="<?php echo $brand_main_image; ?>">
+	</a>
 	<button class="close-button" data-close aria-label="Close modal" type="button">
     	<span aria-hidden="true">&times;</span>
 	</button>
